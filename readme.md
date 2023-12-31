@@ -4,7 +4,7 @@
 
 ## 常用套件
 - helmet
-- @godaddy/terminus
+- close-with-grace
 - @fastify/under-pressure
 - @fastify/cors
 - @fastify/env
