@@ -1,5 +1,6 @@
 // 抓取 env 的設定
 // 使用 env-var 來驗證以及針對數值轉換 env 的設定
+// TODO: Use [env-schema](https://www.npmjs.com/package/env-schema) instead 
 
 import envVar from "env-var";
 import dotenv from "dotenv";
