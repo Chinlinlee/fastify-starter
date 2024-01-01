@@ -3,6 +3,7 @@ import autoLoad from "@fastify/autoload";
 import sensible from "@fastify/sensible";
 import { join } from "desm";
 import underPressure from "@fastify/under-pressure";
+import cors from "@fastify/cors";
 
 export async function buildApp(options = {}) {
     const app = fasitfy(options);
@@ -29,6 +30,10 @@ export async function buildApp(options = {}) {
         maxHeapUsedBytes: 1e9, // 約 1GB
         maxRssBytes: 1e9,
         maxEventLoopUtilization: 0.98
+    });
+
+    await app.register(cors, {
+        origin: false
     });
 
     return app;
